@@ -50,7 +50,7 @@ async function generateHtmlForFolder(startPath) {
 </body>
 </html>
 	`;
-    fs.writeFile(`${folder}/index.html`, htmlString, ['utf8'], () => { });
+    fs.writeFile(`${startPath}/index.html`, htmlString, ['utf8'], () => { });
 }
 
 function getLink(type, name) {
