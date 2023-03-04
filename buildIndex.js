@@ -39,7 +39,7 @@ async function generateHtmlForFolder(folder) {
 </head>
 <body>
 
-	<h1>E-Scape.co.jp - CDN</h1>
+	<h1>e-scape.co.jp - CDN</h1>
 	
 	<hr />
 	
