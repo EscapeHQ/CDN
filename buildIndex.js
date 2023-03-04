@@ -10,14 +10,14 @@ async function generateHtml() {
 }
 
 
-async function generateHtmlForFolder(folder) {
+async function generateHtmlForFolder(startPath) {
 	let fileLists = [];
 	
-    const allFiles = fs.readdirSync(folder, { withFileTypes: true });
+    const allFiles = fs.readdirSync(startPath, { withFileTypes: true });
     for (const dirent of allFiles) {
         if (dirent.isDirectory()) {
 			fileLists.push(getLink(0, dirent.name));
-			await generateHtmlForFolder(`./cdnFiles/${dirent.name}`, `./${dirent.name}/`);
+			await generateHtmlForFolder(`./${startPath}/${dirent.name}`, `./${dirent.name}/`);
 			continue;
 		}
         if (dirent.name[0] == ".") continue;
