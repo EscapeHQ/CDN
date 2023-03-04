@@ -7,9 +7,7 @@ on:
     branches: ['main']
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 jobs:
   build:
@@ -34,7 +32,7 @@ jobs:
           echo "" > .gitignore
           npm run build
 
-      - uses: JamesIves/github-pages-deploy-action@v4.3.4
+      - uses: JamesIves/github-pages-deploy-action@v4
         name: Deploy to GitHub Pages
         if: github.event_name != 'pull_request'
         with:
