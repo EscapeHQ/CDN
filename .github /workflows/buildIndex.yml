@@ -1,4 +1,4 @@
-name: buildIndex
+name: Build Index
 
 permissions:
   contents: write
