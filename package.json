@@ -1,0 +1,17 @@
+{
+  "name": "escapehq-cdn",
+  "version": "1.0.0",
+  "description": "A place to store static files on the web for free 😉",
+  "main": "buildIndex.js",
+  "scripts": {
+    "build": "node buildIndex.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/escapehq/CDN.git"
+  },
+  "bugs": {
+    "url": "https://github.com/escapehq/CDN/issues"
+  },
+  "homepage": "https://cdn.e-scape.co.jp"
+}
