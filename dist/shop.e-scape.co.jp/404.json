@@ -1,0 +1,118 @@
+{
+    "templates": {
+        "text_block": {
+            "type": "text",
+            "width": {
+                "type": "match_parent"
+            },
+            "height": {
+                "type": "wrap_content"
+            },
+            "paddings": {
+                "left": 24,
+                "top": 16,
+                "right": 16,
+                "bottom": 16
+            },
+            "margins": {
+                "left": 24,
+                "right": 24
+            },
+            "border": {
+                "corner_radius": 8
+            },
+            "background": [
+                {
+                    "type": "solid",
+                    "color": "#0E000000"
+                }
+            ],
+            "font_size": 14,
+            "font_weight": "medium",
+            "text_alignment_vertical": "center",
+            "text_alignment_horizontal": "center",
+            "text_color": "#000000"
+        },
+        "title": {
+            "type": "text",
+            "font_size": 20,
+            "line_height": 24,
+            "font_weight": "bold",
+            "paddings": {
+                "left": 24,
+                "right": 24,
+                "bottom": 16
+            }
+        },
+        "subtitle": {
+            "font_size": 15,
+            "line_height": 20,
+            "type": "text",
+            "paddings": {
+                "left": 24,
+                "right": 24
+            }
+        }
+    },
+    "card": {
+        "log_id": "404",
+        "states": [
+            {
+                "state_id": 0,
+                "div": {
+                    "type": "container",
+                    "orientation": "vertical",
+                    "margins": {
+                        "top": 24,
+                        "bottom": 24
+                    },
+                    "items": [
+                        {
+                            "type": "title",
+                            "text": "Oh! 404 not found"
+                        },
+                        {
+                            "type": "subtitle",
+                            "text": "page not found.\n\ncheck javascript working in your browser.",
+                            "margins": {
+                                "bottom": 12
+                            }
+                        },
+                        {
+                            "type": "state",
+                            "div_id": "sample",
+                            "states": [
+                                {
+                                    "state_id": "first",
+                                    "div": {
+                                        "type": "text_block",
+                                        "text": "Check first",
+                                        "actions": [
+                                            {
+                                                "log_id": "switch_state1",
+                                                "url": "div-action://set_state?state_id=0/sample/second"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "state_id": "second",
+                                    "div": {
+                                        "type": "text_block",
+                                        "text": "Check second",
+                                        "actions": [
+                                            {
+                                                "log_id": "switch_state1",
+                                                "url": "div-action://set_state?state_id=0/sample/first"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}
